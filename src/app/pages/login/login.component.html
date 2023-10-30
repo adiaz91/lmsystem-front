@@ -1,0 +1,94 @@
+<div class="main-container d-flex align-items-center py-4 bg-body-tertiary">
+    <main class="form-signin w-100 m-auto">
+   
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+    
+        <div class="form-floating">
+          <input
+            type="email"
+            class="form-control"
+            id="floatingInput"
+            placeholder="name@example.com"
+            [(ngModel)]="email"
+          />
+          <label for="floatingInput">Email address</label>
+        </div>
+
+
+        <button class="btn btn-primary w-100 py-2 form-button" type="submit" (click)="login()">Student Access</button>
+        <button class="btn btn-secondary w-100 py-2 form-button" type="submit" (click)="admin()">Admin Access</button>
+        
+  
+        <h1 class="h3 mb-3 fw-normal">Create new account</h1>
+  
+
+        <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInputFname"
+              placeholder="First Name"
+              [(ngModel)]="student.firstName"
+            />
+            <label for="floatingInputFname">First name</label>
+        </div>
+        <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInputLname"
+              placeholder="Last Name"
+              [(ngModel)]="student.lastName"
+            />
+            <label for="floatingInputLname">Last name</label>
+        </div>
+        <div class="form-floating">
+            <input
+              type="date"
+              class="form-control"
+              id="floatingInputDob"
+              placeholder="Date of birth"
+              [(ngModel)]="student.dateOfBirth"
+            />
+            <label for="floatingInputLname">Date of birth</label>
+        </div>
+        <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInputAddress"
+              placeholder="Address"
+              [(ngModel)]="student.address"
+            />
+            <label for="floatingInputAddress">Address</label>
+        </div>
+
+        <div class="form-floating">
+          <input
+            type="email"
+            class="form-control"
+            id="floatingInputEmail2"
+            placeholder="name@example.com"
+            [(ngModel)]="student.email"
+          />
+          <label for="floatingInputEmail2">Email</label>
+        </div>
+
+        <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInputPhone"
+              placeholder="Phone number"
+              [(ngModel)]="student.phoneNumber"
+            />
+            <label for="floatingInputPhone">Phone number </label>
+          </div>
+
+
+        <button class="btn btn-primary w-100 py-2 form-button" type="submit" (click)="register()">Sign up</button>
+        <p class="mt-5 mb-3 text-body-secondary">&copy; 2023</p>
+    
+    </main>
+</div>
+    

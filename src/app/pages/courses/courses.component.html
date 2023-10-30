@@ -1,0 +1,41 @@
+
+<div class="container px-4 py-5" id="hanging-icons">
+
+  <div class="container" *ngIf="rol=='ADMIN'">
+    <h1>Create course</h1>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="" [(ngModel)]="course.name">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Description</label>
+            <textarea class="form-control" id="description" name="description" rows="3"  placeholder="Enter a description" [(ngModel)]="course.description"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="startDate" class="form-label">Start Date</label>
+            <input type="date" class="form-control" id="startDate" name="startDate" [(ngModel)]="course.startDate">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="create()" >Submit</button>
+    </form>
+  </div>
+
+  <br/>
+  <h2 class="pb-2 border-bottom"></h2>
+  
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3"  *ngFor="let course of courseList">
+    <div class="col d-flex align-items-start">
+      <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+       
+      </div>
+      <div>
+        <h2>{{course.name}}</h2>
+        <h3>{{course.startDate}}</h3>
+        <p>{{course.description}}</p>
+       
+        <button  class="btn btn-primary"  (click)="register(course.id)"  *ngIf="rol=='STUDENT'" >Sign up</button>
+      </div>
+    </div>
+  
+    </div>
+</div>
